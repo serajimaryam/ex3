@@ -1,5 +1,6 @@
 
-function chessValue(){
+function chessValue(event){
+   
     const val = document. querySelector('input'). value;
     let chessNum = Number(val);
 
@@ -22,4 +23,8 @@ function chessValue(){
          chessboard.appendChild(chessSquare);
       }
    }
+   event.preventDeault();
 }
+const form = document.querySelector('form');
+
+form.addEventListener('submit',chessValue);
